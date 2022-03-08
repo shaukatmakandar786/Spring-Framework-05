@@ -53,3 +53,11 @@ c. Spring Framework has provide predefined implementation classes for Resource i
     public void getBean(String id)  
   
     HelloBean hello=(HelloBean)factory.getBean("helloBean");  
+    
+ # ApplicationContext:  
+ 
+ a. ApplicationContext is an IOC container in Spring Framework,it will creates bean object and it will supplay Bean object to Spring Applications.  
+ 
+ b. ApplicationContext is child to BeanFactory, it able to perform all functionalities what BeanFactory is performing and it will provied the advanced features like I18N,Even Notification Model,...  
+ 
+ c. In Spring Framework ApplicationContext is represented in the form of a predefined interface "org.springframework.context.ApplicationContext", it is child interface to "BeanFactory" interface.  
