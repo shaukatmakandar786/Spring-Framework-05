@@ -163,3 +163,38 @@ c. Spring Framework has provide predefined implementation classes for Resource i
 1. Prepare Bean class as per the requirements.  
 2. Prepare Spring configuration file and provide configurations.  
 3. Prepare test Application, where we must use ApplicationContext container to manage beans.  
+
+
+# ApplicationContext Example
+
+## Student.java
+
+	package com.shaukat.beans;  
+
+	public class Student {  
+
+		private int rno;  
+		private String name;  
+	
+		public int getRno() {  
+			return rno;  
+		}  
+		public void setRno(int rno) {  
+			this.rno = rno;  
+		}   
+		public String getName() {  
+			return name;  
+		}  
+		public void setName(String name) {  
+			this.name = name;  
+		}  
+	
+		public void getStudentDetails()  
+		{  
+			System.out.println("Students Details...");  
+			System.out.println("---------------------");  
+			System.out.println("Roll No:="+rno);  
+			System.out.println("Name:="+name);  
+		}  
+	}  
+
