@@ -61,3 +61,12 @@ c. Spring Framework has provide predefined implementation classes for Resource i
  b. ApplicationContext is child to BeanFactory, it able to perform all functionalities what BeanFactory is performing and it will provied the advanced features like I18N,Even Notification Model,...  
  
  c. In Spring Framework ApplicationContext is represented in the form of a predefined interface "org.springframework.context.ApplicationContext", it is child interface to "BeanFactory" interface.  
+ 
+ d. Spring Framework has provided the following implementation classes for ApplicationContext interface.
+ 
+    i. ClassPathXmlApplicationContext
+    ii. FileSystemXmlApplicationContext  
+    iii. WebXmlApplicationContext  
+    
+    ApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");  
+    
