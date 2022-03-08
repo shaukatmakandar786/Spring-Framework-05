@@ -1,0 +1,19 @@
+package com.shaukat.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.shaukat.beans.HelloBean;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext context1=new ClassPathXmlApplicationContext("applicationContext.xml");
+		HelloBean hBean=(HelloBean)context1.getBean("helloBean");
+		hBean.sayHello();
+		
+	}
+
+}

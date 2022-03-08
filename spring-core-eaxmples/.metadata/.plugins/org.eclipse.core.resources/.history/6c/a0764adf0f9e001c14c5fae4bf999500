@@ -1,0 +1,5 @@
+package com.shaukat.beans;
+
+public class HelloBean {
+
+}
