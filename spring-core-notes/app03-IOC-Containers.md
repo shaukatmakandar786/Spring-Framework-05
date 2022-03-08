@@ -237,4 +237,4 @@ c. Spring Framework has provide predefined implementation classes for Resource i
 	}  
 
 
-
+![applicationContext how internally works](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/ApplicationContext03.png)
