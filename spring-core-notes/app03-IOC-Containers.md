@@ -238,3 +238,24 @@ c. Spring Framework has provide predefined implementation classes for Resource i
 
 
 ![applicationContext how internally works](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/ApplicationContext03.png)
+
+# Q0What are the diffrences between Beanfactory and ApplicationContext Containers?  
+
+Ans:
+
+1. BeanFactory is fundamental conatiner,it able to provide fundamental functionalities to the the Spring Application like creating Bean objects and supplying Bean object to Spring Application.  
+
+ApplicationContext is an extension of BeanFactory,it able to perform the advanced features like I18N and Event Notification Model,...along basic functionalities what BeanFactory is providing.  
+
+2. BeanFactory is not supportng AOP module.  
+
+Applicationcontext is supporting AOP module.  
+
+3. BeanFactory is not suitable for Web Application development with Spring WEB MVC module.  
+
+Applicationcontext is very much suitable for Web Application development on the basis of Spring WEB MVC.  
+
+4. BeanFactory is able to create Bean Object when we access getBea() method, that is Lazy instantiation/Initialization.    
+
+Application Context is able to create Bean Objects at the time of ApplicatonContext startup, 
+that is, early Instantiation/ Initialization.  
