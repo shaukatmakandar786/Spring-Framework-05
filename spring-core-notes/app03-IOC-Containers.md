@@ -54,6 +54,8 @@ c. Spring Framework has provide predefined implementation classes for Resource i
   
     HelloBean hello=(HelloBean)factory.getBean("helloBean");  
     
+![How BeanFactory works internally](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactory01.png)    
+    
  # ApplicationContext:  
  
  a. ApplicationContext is an IOC container in Spring Framework,it will creates bean object and it will supplay Bean object to Spring Applications.  
