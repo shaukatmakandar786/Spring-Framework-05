@@ -6,7 +6,8 @@ There are two types of IOC containers:
 
     1.  BeanFactory  
     2.  ApplicationContext  
-    1.  BeanFactory   
+    
+# BeanFactory:  
     
 a. It is basic fundamental container to create Bean object in Spring Applicatons.  
 
@@ -25,7 +26,7 @@ f.There are three steps to use BeanFactory.
     ii. create BeanFactory Object.  
     iii. Get Bean Object from BeanFactory and Access Business Methods.  
 
-## Create Resource Object:  
+### Create Resource Object:  
 
 a. To represent beans configuration details which we provide in Spring configuration file then we have to use Resource object.  
 
@@ -43,11 +44,11 @@ c. Spring Framework has provide predefined implementation classes for Resource i
 
     Resource resource=new ClassPathResource("spring-config.xml");  
 
-## Create BeanFactory Object:
+### Create BeanFactory Object:
 
     BeanFactory factory=new XmlBeanFactory(resource);  
 
-## Get Bean Object from BeanFactory and Access Business Methods:
+### Get Bean Object from BeanFactory and Access Business Methods:
 
     public void getBean(String id)  
   
