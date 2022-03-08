@@ -72,3 +72,4 @@ c. Spring Framework has provide predefined implementation classes for Resource i
     
     ApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");  
     
+![BeanFactoryHirarchy](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactoryHirarchy02.png)
