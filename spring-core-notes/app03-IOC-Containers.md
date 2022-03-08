@@ -72,7 +72,67 @@ c. Spring Framework has provide predefined implementation classes for Resource i
     
     ApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");  
     
-![BeanFactoryHirarchy](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactoryHirarchy02.png)
+![BeanFactoryHirarchy](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactoryHirarchy02.png)  
+
+# BeanFactory Example:
+
+## Employee.java
+
+        package com.shaukat.beans;  
+
+        public class Employee {  
+
+	        private int eno;  
+	        private String name;  
+	        private double sal;  
+	
+	        public int getEno() {  
+		        return eno;  
+	        }  
+	        public void setEno(int eno) {  
+		        this.eno = eno;  
+	        }  
+	        public String getName() {  
+		        return name;  
+	        }  
+	        public void setName(String name) {  
+		        this.name = name;  
+	        }  
+	        public double getSal() {  
+		        return sal;  
+	        }  
+	        public void setSal(double sal) {  
+		        this.sal = sal;  
+	        }  
+	
+	        public void empDetails()  
+	        {  
+		        System.out.println("Employee details");  
+		        System.out.println("------------------");  
+		        System.out.println("Employee No:"+eno);  
+		        System.out.println("Employee Name:"+name);  
+		        System.out.println("Employee Salary:"+sal);  
+	        }  
+        }  
+        
+## applicationContext.xml
+
+            <?xml version="1.0" encoding="UTF-8"?>  
+            <beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+             https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+                <bean id="emp" class="com.shaukat.beans.Employee">  
+                    <property name="eno" value="101"/>  
+                    <property name="name" value="shaukat"/>  
+                <property name="sal" value="60000"/>  
+       
+              </bean>  
+
+
+            </beans>  
+
 
 
 ### if we want to use ApplicationContext container in Spring Application:
