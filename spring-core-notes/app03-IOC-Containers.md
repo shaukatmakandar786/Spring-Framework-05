@@ -55,24 +55,6 @@ c. Spring Framework has provide predefined implementation classes for Resource i
     HelloBean hello=(HelloBean)factory.getBean("helloBean");  
     
 ![How BeanFactory works internally](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactory01.png)    
-    
- # ApplicationContext:  
- 
- a. ApplicationContext is an IOC container in Spring Framework,it will creates bean object and it will supplay Bean object to Spring Applications.  
- 
- b. ApplicationContext is child to BeanFactory, it able to perform all functionalities what BeanFactory is performing and it will provied the advanced features like I18N,Even Notification Model,...  
- 
- c. In Spring Framework ApplicationContext is represented in the form of a predefined interface "org.springframework.context.ApplicationContext", it is child interface to "BeanFactory" interface.  
- 
- d. Spring Framework has provided the following implementation classes for ApplicationContext interface.
- 
-    i. ClassPathXmlApplicationContext
-    ii. FileSystemXmlApplicationContext  
-    iii. WebXmlApplicationContext  
-    
-    ApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");  
-    
-![BeanFactoryHirarchy](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactoryHirarchy02.png)  
 
 # BeanFactory Example:
 
@@ -134,6 +116,24 @@ c. Spring Framework has provide predefined implementation classes for Resource i
             </beans>  
 
 
+    
+ # ApplicationContext:  
+ 
+ a. ApplicationContext is an IOC container in Spring Framework,it will creates bean object and it will supplay Bean object to Spring Applications.  
+ 
+ b. ApplicationContext is child to BeanFactory, it able to perform all functionalities what BeanFactory is performing and it will provied the advanced features like I18N,Even Notification Model,...  
+ 
+ c. In Spring Framework ApplicationContext is represented in the form of a predefined interface "org.springframework.context.ApplicationContext", it is child interface to "BeanFactory" interface.  
+ 
+ d. Spring Framework has provided the following implementation classes for ApplicationContext interface.
+ 
+    i. ClassPathXmlApplicationContext
+    ii. FileSystemXmlApplicationContext  
+    iii. WebXmlApplicationContext  
+    
+    ApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");  
+    
+![BeanFactoryHirarchy](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/BeanFactoryHirarchy02.png)  
 
 ### if we want to use ApplicationContext container in Spring Application:
 
