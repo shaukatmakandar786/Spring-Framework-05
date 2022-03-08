@@ -77,4 +77,6 @@ c. Spring Framework has provide predefined implementation classes for Resource i
 
 ### if we want to use ApplicationContext container in Spring Application:
 
-1. 
+1. Prepare Bean class as per the requirements.  
+2. Prepare Spring configuration file and provide configurations.  
+3. Prepare test Application, where we must use ApplicationContext container to manage beans.  
