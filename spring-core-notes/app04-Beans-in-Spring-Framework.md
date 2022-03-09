@@ -34,4 +34,13 @@ b. Rules and Regulation to use Bean in Spring:
     
     vii. If we want to generate hasgcode values to the Bean objects in our own view then we have to override hasCode() method.  
     
-    
+# 2. Beans Configuration
+
+--> We must provide details of the bean classes to the containers inorder to Instantiate.  
+
+1. XML Basd Configuration  
+2. Anntation Based Configuration  
+3. Java Based coniguration  
+
+## 1. XML Basd Configuration:  
+
