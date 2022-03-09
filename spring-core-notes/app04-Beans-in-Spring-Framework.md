@@ -162,6 +162,8 @@ Spring Framework has provided 7 types of scopes to make available Bean object an
 1. It is default scope in spring application.
 2. It will create a seperate Bean object for each and every bean definition in Spring Configuration.
 
+![Singleton Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.2)
+
 # 2. Prototype Scope
 
 1. It is not default scope in Spring Application.
