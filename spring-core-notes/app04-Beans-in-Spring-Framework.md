@@ -46,3 +46,17 @@ b. Rules and Regulation to use Bean in Spring:
 
 ## 1. XML Basd Configuration:  
 
+if we provide beans details to the containers through an XML file then it is called as XML configuration.  
+
+    <beans---------->    
+        <bean id="----" name="-----" scope="----">  
+            --------  
+         </beans>  
+     </beans>  
+     
+     <bean> tag can be used to provide single bean configuration details.  
+     id: it will provide an identity value for the bean object.  
+     name:it will provide an identity and alias names to the bean object.  
+     scope:it can be used to specify a particular spring scope inorder to keep Bean objects.  
+     
+     
