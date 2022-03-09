@@ -98,7 +98,7 @@ In bean configuration, we can provide both 'id' attribute and 'name' attribute, 
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="helloBean1 helloBean2,helloBean3;helloBean4"                class="com.shaukat.beans.HelloBean">  
+    <bean name="helloBean1 helloBean2,helloBean3;helloBean4" class="com.shaukat.beans.HelloBean">  
         <property name="name" value="Shaukat Makandar"></property>  
   	</bean>  
   	
