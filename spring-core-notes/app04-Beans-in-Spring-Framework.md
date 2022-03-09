@@ -68,3 +68,76 @@ if we provide beans details to the containers through an XML file then it is cal
 In Bean configuration,we can provide bean class configuration with 'name' attribute and without 'id' attribute.  
 
 In bean configuration, we can provide both 'id' attribute and 'name' attribute, at that time 'id' attribute treated as bean identity and 'name' attribute values are treated as bean alias names.  
+
+# HelloBean.java
+
+    package com.shaukat.beans;  
+
+    public class HelloBean {  
+
+	    private String name;  
+	
+	    public String getName() {  
+		    return name;  
+	    }  
+	    public void setName(String name) {  
+		    this.name = name;  
+	    }  
+
+	    public String sayHello()
+	    {
+		    return"Hello "+name;  
+	    }  
+    }  
+    
+# applicationContext.xml
+
+    <?xml version="1.0" encoding="UTF-8"?>  
+    <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="helloBean1 helloBean2,helloBean3;helloBean4"                class="com.shaukat.beans.HelloBean">  
+        <property name="name" value="Shaukat Makandar"></property>  
+  	</bean>  
+  	
+  	<bean id="helloBean" class="com.shaukat.beans.HelloBean">  
+     	<property name="name" value="Shaukat Makandar"></property>  
+  	</bean>  
+  	
+	<bean id="hello" name="hello1 hello2" class="com.shaukat.beans.HelloBean">  
+     	<property name="name" value="Shaukat Makandar"></property>  
+  	</bean>  
+
+    </beans>  
+    
+# Test.java  
+
+    package com.shaukat.test;  
+
+    import org.springframework.context.ApplicationContext;  
+    import org.springframework.context.support.ClassPathXmlApplicationContext;  
+
+    import com.shaukat.beans.HelloBean;  
+
+    public class Test {  
+
+	    public static void main(String[] args) {  
+		
+		    ApplicationContext context=new ClassPathXmlApplicationContext("com/shaukat/resourses/applicationContext.xml");  
+		    HelloBean hBean1=(HelloBean)context.getBean("helloBean1");  
+		    System.out.println(hBean1.sayHello());  
+		
+		    HelloBean hBean2=(HelloBean)context.getBean("helloBean2");  
+		System.out.println(hBean2.sayHello());  
+		
+		    HelloBean hBean=(HelloBean)context.getBean("helloBean");  
+		    System.out.println(hBean.sayHello());  
+		
+		    HelloBean h1=(HelloBean)context.getBean("hello");
+		    System.out.println(h1.sayHello());
+		
+	    }
+
+    }
