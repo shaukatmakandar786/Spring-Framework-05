@@ -141,3 +141,30 @@ In bean configuration, we can provide both 'id' attribute and 'name' attribute, 
 	    }
 
     }
+    
+3. Where 'class' attributes is able to take fully qualified name of the respective bean class.
+4. Where 'acope' attribute will take a particular spring scope.
+
+# Scopes in Spring Framework:
+
+Spring Framework has provided 7 types of scopes to make available Bean object and to generate same or different bean for our Bean request.
+
+1. Singleton Scope
+2. Prototype Scope
+3. Request Scope
+4. Session Scope
+5. globaleSession Scope
+6. application Scope
+7. webSocket Scope
+
+# 1. Singleton Scope
+
+1. It is default scope in spring application.
+2. It will create a seperate Bean object for each and every bean definition in Spring Configuration.
+
+# 2. Prototype Scope
+
+1. It is not default scope in Spring Application.
+2. It allows to create a seperate Bean object for each and every request for Bean, that is , for each and every getbean() method call.
+
+
