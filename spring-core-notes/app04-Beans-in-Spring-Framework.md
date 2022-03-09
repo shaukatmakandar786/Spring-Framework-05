@@ -59,4 +59,12 @@ if we provide beans details to the containers through an XML file then it is cal
      name:it will provide an identity and alias names to the bean object.  
      scope:it can be used to specify a particular spring scope inorder to keep Bean objects.  
      
-     
+## Q) What is the diffrence between 'id' and 'name' attributes?
+
+1. 'id' attribute will take single value that is identity for the bean object inorder to retriave.  
+2. 'name' attribute will take one or more no of values with , or ; or space seprator.If we provide more than one values then first value is treated as identity for the bean object and the remaining values are treated as alisa names to the bean identity.  
+
+### Note:  
+In Bean configuration,we can provide bean class configuration with 'name' attribute and without 'id' attribute.  
+
+In bean configuration, we can provide both 'id' attribute and 'name' attribute, at that time 'id' attribute treated as bean identity and 'name' attribute values are treated as bean alias names.  
