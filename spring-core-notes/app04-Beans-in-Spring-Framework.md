@@ -170,3 +170,24 @@ Spring Framework has provided 7 types of scopes to make available Bean object an
 2. It allows to create a seperate Bean object for each and every request for Bean, that is , for each and every getbean() method call.
 
 ![Prototype Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.3)
+
+# 3. Java Based coniguration  
+
+Upto Spring 2.4 version,it mandatory to provide Spring configuration file but, from Sprinmg 3.x version onwards,Spring configuration file is optional, we can use Spring configuration class as an alternative for Spring configuration file.
+
+1. Create Bean classes as per the requirement.
+2. Create Spring configuration class with the requirement methods by using the following annotations.  
+			
+		i. @Configuration
+		ii. @Bean
+		
+3. In main method use the following container class.
+
+		AnnotationConfigApplicationContext ctx=new AnnotationConfigApplicationContext(configClass.class)  
+		
+4. Get Bean object.
+
+		public Object getBean(Class c)/public Object getBean(String methodName)
+		
+5. Access Business Methods.		
+	
