@@ -169,4 +169,4 @@ Spring Framework has provided 7 types of scopes to make available Bean object an
 1. It is not default scope in Spring Application.
 2. It allows to create a seperate Bean object for each and every request for Bean, that is , for each and every getbean() method call.
 
-
+![Prototype Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.3)
