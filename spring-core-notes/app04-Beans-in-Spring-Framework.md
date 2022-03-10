@@ -171,7 +171,7 @@ Spring Framework has provided 7 types of scopes to make available Bean object an
 
 ![Prototype Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.3)
 
-# 3. Java Based coniguration  
+# 3. Java Based configuration  
 
 Upto Spring 2.4 version,it mandatory to provide Spring configuration file but, from Sprinmg 3.x version onwards,Spring configuration file is optional, we can use Spring configuration class as an alternative for Spring configuration file.
 
@@ -191,3 +191,4 @@ Upto Spring 2.4 version,it mandatory to provide Spring configuration file but, f
 		
 5. Access Business Methods.		
 	
+![Java Based Configuration Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.4)	
