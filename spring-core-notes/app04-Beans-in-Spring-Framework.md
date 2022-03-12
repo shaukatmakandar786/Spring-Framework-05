@@ -227,11 +227,12 @@ Creating Object for the loaded Bean class.
 ![Bean Initialization example by using property tag](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app03.1
 )
 
-2. By using Custom Initialization and Destruction method.
-![Bean Custome Bean Initialization Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.8
+2. By using Custom init-method and destroy-method method.
+![Custome Bean Initialization Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.8
 )
-3. By using InitializingBean and dDisosable callback interface
-
+3. By using InitializingBean and Disposable callback interface
+![Custome Bean Initialization Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.9
+)
 
 4. By using @PostContruct and @PreDestroy annotations.
 
