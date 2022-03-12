@@ -192,3 +192,35 @@ Upto Spring 2.4 version,it mandatory to provide Spring configuration file but, f
 5. Access Business Methods.		
 	
 ![Java Based Configuration Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.4)	
+
+# 4. Beans Lifecyle
+
+In Spring Framework, bean life cycle conatins the following stages.
+
+1. Bean Class Loading
+2. Bean Instantiation
+3. Bean Initialization
+4. Bean Destruction
+
+## 1. Bean Class Loading
+
+Loading Bean class byte code to the memory.
+
+Class c=class.forName(com.shaukat.beans.HelloBean)
+
+## 2. Bean Instantiation
+
+Creating Object for the loaded Bean class.
+
+1. By using Constructor directly.
+2. By Using static Factory method.
+3. By using instance Factory method.
+
+## 3. Bean Initialization and Bean Destruction
+
+1. By using <property> tag in XML file
+2. By using Custom Initialization and Destruction method.
+3. By using InitializingBean and dDisosable callback interface
+4. By using @PostContruct and @PreDestroy annotations.
+
+
