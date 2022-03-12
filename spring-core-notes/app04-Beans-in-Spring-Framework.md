@@ -218,7 +218,7 @@ Creating Object for the loaded Bean class.
 
 ## 3. Bean Initialization and Bean Destruction
 
-1. By using <property> tag in XML file
+1. By using 'property' tag in XML file
 2. By using Custom Initialization and Destruction method.
 3. By using InitializingBean and dDisosable callback interface
 4. By using @PostContruct and @PreDestroy annotations.
