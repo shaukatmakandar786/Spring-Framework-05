@@ -228,8 +228,8 @@ Creating Object for the loaded Bean class.
 )
 
 2. By using Custom Initialization and Destruction method.
-
-
+![Bean Custome Bean Initialization Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.8
+)
 3. By using InitializingBean and dDisosable callback interface
 
 
