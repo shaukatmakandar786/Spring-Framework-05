@@ -224,8 +224,15 @@ Creating Object for the loaded Bean class.
 ## 3. Bean Initialization and Bean Destruction
 
 1. By using 'property' tag in XML file
+![Bean Initialization example by using property tag](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app03.1
+)
+
 2. By using Custom Initialization and Destruction method.
+
+
 3. By using InitializingBean and dDisosable callback interface
+
+
 4. By using @PostContruct and @PreDestroy annotations.
 
 
