@@ -213,8 +213,13 @@ Class c=class.forName(com.shaukat.beans.HelloBean)
 Creating Object for the loaded Bean class.
 
 1. By using Constructor directly.
+![Creating Bean object using constructor directly](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.5)
+
 2. By Using static Factory method.
+![Creating Bean object using static Factory method](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.6)
+
 3. By using instance Factory method.
+![Creating Bean object using Instance Factory method](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.7)
 
 ## 3. Bean Initialization and Bean Destruction
 
