@@ -235,5 +235,7 @@ Creating Object for the loaded Bean class.
 )
 
 4. By using @PostContruct and @PreDestroy annotations.
+![Custome Bean Initialization Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.11
+)
 
 
