@@ -238,4 +238,17 @@ Creating Object for the loaded Bean class.
 ![Custome Bean Initialization Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app04.11
 )
 
+### Note:
+In general in Spring Framework application,we are able to use either of the above three approaches to perform bean initialization and destruction,we are not using all three approaches at a time.If we use all three above approaches in single bean then IOC container will execute the above three approaches provided initialization methods and destruction in the following order.
 
+#### Initialization Order:
+
+1. @PostConstruct
+2. afterProperiesSet() provided by InitializingBean interface
+3. init-method in bean tag
+
+#### Destruction Order:
+
+1. @PreDestroy
+2. destroy() provided by DisposableBean interface
+3. destroy-method in bean tag
