@@ -517,3 +517,89 @@ If we want to use constructor dependency injection in spring application,first w
 # Circular Dependency Injection:
 
 In Spring Application, If more than one object are dependent on each other through constructor dependency injection then it is called as Circular Dependency Injection, which is not supported by Spring Framework,it able to to raise an exception like "org.springfarmework.beans.factory.BeanCurrentlyCreationException"
+
+
+# Student.java
+
+	package com.shaukat.beans;
+
+	public class Student {
+
+		private Branch branch;
+
+		public Student(Branch branch) {
+			super();
+			this.branch = branch;
+		}
+		public String getStudentName()
+		{
+			return "shaukat";
+		}
+
+	}
+	
+	
+# Branch.java
+
+	package com.shaukat.beans;
+
+	public class Branch {
+
+		private Student student;
+
+		public Branch(Student student) {
+			super();
+			this.student = student;
+		}
+		public String getBranchName()
+		{
+			return "MCA";
+		}
+
+	}
+
+# beans.xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		https://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd
+		">
+	    <bean id="student" class="com.shaukat.beans.Student">  
+			<constructor-arg ref="branch"/>
+	    </bean>
+
+	    <bean id="branch" class="com.shaukat.beans.Branch">
+		<constructor-arg ref="student"/>
+	    </bean>
+
+	</beans>
+	
+# Test.java
+
+	package com.shaukat.test;
+
+	import org.springframework.context.ApplicationContext;
+	import org.springframework.context.support.AbstractApplicationContext;
+	import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+	import com.shaukat.beans.Student;
+	import com.shaukat.beans.Branch;
+
+	public class Test {
+
+		public static void main(String[] args) {
+
+			ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+			Student std=(Student)context.getBean("student");
+			System.out.println(std.getStudentName());
+			Branch brch=(Branch)context.getBean("branch");
+			System.out.println(brch.getBranchName());
+		}
+	}
+
+	Exception in thread "main" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'student' defined in class path resource [beans.xml]: Cannot resolve reference to bean 'branch' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'branch' defined in class path resource [beans.xml]: Cannot resolve reference to bean 'student' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'student': Requested bean is currently in creation: Is there an unresolvable circular reference?
+
