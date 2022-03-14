@@ -239,13 +239,27 @@ If we want to use constructor dependency injection in spring application,first w
 	1. In Spring applicatio if we want to inject User defined data types then we have to use either "<ref>" attribute in <property> tag and
 	<construct-arg> tag or we have to use "<ref>" nested tag under "<property>" tag and "<construct-arg>" tag.
 	
-	<beans>  
-     		<bean id="--" class="--">
-         		<property name="--" ref="--"/>
-				<ref bean="--"/>
-			</property>
-        	</bean>
-    	</beans>  
+		<beans>  
+			<bean id="--" class="--">
+				<property name="--" ref="--"/>
+					<ref bean="--"/>
+				</property>
+			</bean>
+		</beans>  
+	
 	
 	2. In Spring applicatio if we want to inject List of elements in bean then we have to declared the corresponding property
 	as java.util.List and we have to provide values in configuration fle by using <list> tag in <property> tag or in <construct-arg> tag.
+	
+		<beans>  
+		  <bean id="--" class="--">
+		     <property name="--">
+			<list>
+			  <value>value1</value>
+			  <value>value2</value>
+			  ---
+			  ---
+			</list>
+		     </property>
+		  </bean>
+		</beans>
