@@ -510,4 +510,6 @@ If we want to use constructor dependency injection in spring application,first w
 		}
 	}
 
+# Circular Dependency Injection:
 
+In Spring Application, If more than one object are dependent on each other through constructor dependency injection then it is called as Circular Dependency Injection, which is not supported by Spring Framework,it able to to raise an exception like "org.springfarmework.beans.factory.BeanCurrentlyCreationException"
