@@ -264,7 +264,7 @@ If we want to use constructor dependency injection in spring application,first w
 		  </bean>
 		</beans>
 		
-	2. In Spring applicatio if we want to inject Set of elements in bean then we have to declared the corresponding property
+	3. In Spring applicatio if we want to inject Set of elements in bean then we have to declared the corresponding property
 	as java.util.Set and we have to provide values in configuration fle by using <set> tag in <property> tag or in <construct-arg> tag.	
 
 
@@ -277,6 +277,22 @@ If we want to use constructor dependency injection in spring application,first w
 			  ---
 			  ---
 			</set>
+		     </property>
+		  </bean>
+		</beans>
+		
+	3. In Spring applicatio if we want to inject Map of elements in bean then we have to declared the corresponding property
+	as java.util.Map and we have to provide Key-Value pair in configuration file by using <map> and <entry> tag in <property> tag or in <construct-arg> tag.	
+	
+		<beans>  
+		  <bean id="--" class="--">
+		     <property name="--">
+			<map>
+			  <entry key="key1" value="value1"/>
+			  <entry key="key2" value="value2"/>
+			  ---
+			  ---
+			</map>
 		     </property>
 		  </bean>
 		</beans>
