@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        https://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        ">
+    <bean id="addr" class="com.shaukat.beans.Address">  
+		<property name="pno" value="202"/>
+		<property name="street" value="M G Road"/>
+		<property name="city" value="Banglore"/>
+		<property name="country" value="India"/>	
+    </bean>
+    <bean id="std" class="com.shaukat.beans.Student">  
+		<property name="sid" value="S-111"/>
+		<property name="sname" value="Shaukat"/>
+		<property name="saddr" ref="addr"/>
+		<property name="squal">	
+			<list>
+				<value>BTech</value>
+				<value>MTech</value>
+				<value>PHD</value>
+			</list>
+		</property>
+		<property name="scourses">	
+			<set>
+				<value>Core Java</value>
+				<value>Adv Java</value>
+				<value>Spring</value>
+				<value>Hibernate</value>
+			</set>
+		</property>
+		
+		<property name="scourses_And_Faculty">	
+			<map>
+				<entry key="CoreJava" value="Hiren"/>
+				<entry key="AdvJava" value="Shubham"/>
+				<entry key="Spring" value="Wasim"/>
+				<entry key="Hibernate" value="Sajjad"/>
+			</map>
+		</property>
+		
+		<property name="scourse_And_Cost">	
+			<props>
+				<prop key="Core Java">1500</prop>
+				<prop key="Adv Java">2000</prop>
+				<prop key="Spring">3000</prop>
+				<prop key="Hibernate">3000</prop>
+			</props>
+		</property>
+			
+    </bean>
+    
+   
+    
+</beans>
+

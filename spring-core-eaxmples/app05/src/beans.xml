@@ -6,16 +6,11 @@
         https://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd
         ">
-
-	
     <bean id="course" class="com.shaukat.beans.Course">  
 		<constructor-arg value="C-111"/>
 		<constructor-arg value="JAVA"/>
-		<constructor-arg value="5000"/>
-		
-		
+		<constructor-arg value="5000"/>	
     </bean>
-
-  
+    
 </beans>
 

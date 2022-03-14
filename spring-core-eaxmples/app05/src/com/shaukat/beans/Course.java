@@ -1,6 +1,5 @@
 package com.shaukat.beans;
 
-import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 public class Course {
@@ -8,6 +7,7 @@ public class Course {
 	private String cidString;
 	private String cnameString;
 	private int ccost;
+	
 	public Course(String cidString, String cnameString, int ccost) {
 		super();
 		this.cidString = cidString;
@@ -18,8 +18,4 @@ public class Course {
 	public String toString() {
 		return "Course [cidString=" + cidString + ", cnameString=" + cnameString + ", ccost=" + ccost + "]";
 	}
-	
-	
-	
-	
 }
