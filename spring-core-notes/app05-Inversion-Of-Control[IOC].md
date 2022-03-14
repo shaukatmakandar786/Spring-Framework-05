@@ -86,7 +86,9 @@ If we want to use constructor dependency injection in spring application,first w
      
 # 2. Setter Method Dependency Injection
 
-If we inject dependency bean values to the Bean through setXXX() methods then it is called as "Setter Method Dependency Injecton".
+    If we inject dependency bean values to the Bean through setXXX() methods then it is called as "Setter Method Dependency Injecton".
 
-To Inject primitive values and String value to the bean then have to use "value" attributes in <property> or <constrcut-arg> tags in beans configuration file, but if we want to inject user define data type,that is object reference values then we have to use "ref" attribut in <property> tag or in <construct-arg> tag.
+    To Inject primitive values and String value to the bean then have to use "value" attributes in <property> or <constrcut-arg> tags
+    in beans configuration file, but if we want to inject user define data type,that is object reference values then we have to use "ref" 
+    attribut in <property> tag or in <construct-arg> tag.
 
