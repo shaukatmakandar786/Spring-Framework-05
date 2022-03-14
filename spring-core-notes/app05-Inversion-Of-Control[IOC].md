@@ -602,4 +602,10 @@ In Spring Application, If more than one object are dependent on each other throu
 	}
 
 	Exception in thread "main" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'student' defined in class path resource [beans.xml]: Cannot resolve reference to bean 'branch' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'branch' defined in class path resource [beans.xml]: Cannot resolve reference to bean 'student' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'student': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	
+## Note:
+
+In Spring Application if we want resolve Circular Dependancy Injection then we have to use Setter Method dependency Injection instead of Constructor Dependency Injection.
+
+
 
