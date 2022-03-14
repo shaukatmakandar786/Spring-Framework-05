@@ -608,4 +608,94 @@ In Spring Application, If more than one object are dependent on each other throu
 In Spring Application if we want resolve Circular Dependancy Injection then we have to use Setter Method dependency Injection instead of Constructor Dependency Injection.
 
 
+# Student.java
+
+	package com.shaukat.beans;
+
+	public class Student {
+
+		private Branch branch;
+
+		public Branch getBranch() {
+			return branch;
+		}
+
+		public void setBranch(Branch branch) {
+			this.branch = branch;
+		}
+
+		public String getStudentName() {
+			return "shaukat";
+		}
+
+	}
+	
+# Branch.java
+
+	package com.shaukat.beans;
+
+	public class Branch {
+
+		private Student student;
+
+		public Student getStudent() {
+			return student;
+		}
+
+		public void setStudent(Student student) {
+			this.student = student;
+		}
+
+		public String getBranchName() {
+			return "MCA";
+		}
+
+	}
+
+# beans.xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		https://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd
+		">
+	    <bean id="student" class="com.shaukat.beans.Student">  
+			<property name="branch" ref="branch"/>
+	    </bean>
+
+	    <bean id="branch" class="com.shaukat.beans.Branch">
+		<property name="student" ref="student"/>
+	    </bean>
+
+	</beans>
+	
+# Test.java
+
+	package com.shaukat.test;
+
+	import org.springframework.context.ApplicationContext;
+	import org.springframework.context.support.AbstractApplicationContext;
+	import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+	import com.shaukat.beans.Student;
+	import com.shaukat.beans.Branch;
+
+	public class Test {
+
+		public static void main(String[] args) {
+
+			ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+			Student std=(Student)context.getBean("student");
+			System.out.println(std.getStudentName());
+			Branch brch=(Branch)context.getBean("branch");
+			System.out.println(brch.getBranchName());
+		}
+	}
+
+	/* shaukat  MCA  */
+
+
 
