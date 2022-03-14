@@ -698,4 +698,10 @@ In Spring Application if we want resolve Circular Dependancy Injection then we h
 	/* shaukat  MCA  */
 
 
+# Q) In Spring Application if we provide both setter dependency injection and Constructor dependency injection to a single bean then what will happen in Spring Application?
+
+Ans:
+
+If we provide both Constructor and Setter method dependency injection to a single bean then IOC Container will perform constructor dependency injection first at the time of creation of bean object, after that IOc container will perform Setter method dependency injection, and the values which are provided by Constructor dependency injection is override by Setter method dependency injection.
+
 
