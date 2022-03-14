@@ -312,3 +312,202 @@ If we want to use constructor dependency injection in spring application,first w
 		     </property>
 		  </bean>
 		</beans>
+		
+
+# Address.java
+
+	package com.shaukat.beans;
+
+	public class Address {
+
+		private String pno;
+		private String street;
+		private String city;
+		private String country;
+
+
+		public String getPno() {
+			return pno;
+		}
+		public void setPno(String pno) {
+			this.pno = pno;
+		}
+		public String getStreet() {
+			return street;
+		}
+		public void setStreet(String street) {
+			this.street = street;
+		}
+		public String getCity() {
+			return city;
+		}
+		public void setCity(String city) {
+			this.city = city;
+		}
+		public String getCountry() {
+			return country;
+		}
+		public void setCountry(String country) {
+			this.country = country;
+		}
+		@Override
+		public String toString() {
+			return "Address [pno=" + pno + ", street=" + street + ", city=" + city + ", country=" + country + "]";
+		}
+
+
+	}
+
+# Student.java
+
+	package com.shaukat.beans;
+
+	import java.util.List;
+	import java.util.Map;
+	import java.util.Properties;
+	import java.util.Set;
+
+	public class Student {
+
+		private String sid;
+		private String sname;
+		private Address saddr;
+		private List<String> squal;
+		private Set<String> scourses;
+		private Map<String,String> scourses_And_Faculty;
+		private Properties scourse_And_Cost;
+
+
+		public String getSid() {
+			return sid;
+		}
+		public void setSid(String sid) {
+			this.sid = sid;
+		}
+		public String getSname() {
+			return sname;
+		}
+		public void setSname(String sname) {
+			this.sname = sname;
+		}
+		public Address getSaddr() {
+			return saddr;
+		}
+		public void setSaddr(Address saddr) {
+			this.saddr = saddr;
+		}
+		public List<String> getSqual() {
+			return squal;
+		}
+		public void setSqual(List<String> squal) {
+			this.squal = squal;
+		}
+		public Set<String> getScourses() {
+			return scourses;
+		}
+		public void setScourses(Set<String> scourses) {
+			this.scourses = scourses;
+		}
+		public Map<String, String> getScourses_And_Faculty() {
+			return scourses_And_Faculty;
+		}
+		public void setScourses_And_Faculty(Map<String, String> scourses_And_Faculty) {
+			this.scourses_And_Faculty = scourses_And_Faculty;
+		}
+		public Properties getScourse_And_Cost() {
+			return scourse_And_Cost;
+		}
+		public void setScourse_And_Cost(Properties scourse_And_Cost) {
+			this.scourse_And_Cost = scourse_And_Cost;
+		}
+
+		@Override
+		public String toString() {
+			return "Student [sid=" + sid + ", sname=" + sname + ", saddr=" + saddr + ", squal=" + squal + ", scourses="
+					+ scourses + ", scourses_And_Faculty=" + scourses_And_Faculty + ", scourse_And_Cost=" + scourse_And_Cost
+					+ "]";
+		}
+
+
+	}
+
+# beans.xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		https://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd
+		">
+	    <bean id="addr" class="com.shaukat.beans.Address">  
+			<property name="pno" value="202"/>
+			<property name="street" value="M G Road"/>
+			<property name="city" value="Banglore"/>
+			<property name="country" value="India"/>	
+	    </bean>
+	    <bean id="std" class="com.shaukat.beans.Student">  
+			<property name="sid" value="S-111"/>
+			<property name="sname" value="Shaukat"/>
+			<property name="saddr" ref="addr"/>
+			<property name="squal">	
+				<list>
+					<value>BTech</value>
+					<value>MTech</value>
+					<value>PHD</value>
+				</list>
+			</property>
+			<property name="scourses">	
+				<set>
+					<value>Core Java</value>
+					<value>Adv Java</value>
+					<value>Spring</value>
+					<value>Hibernate</value>
+				</set>
+			</property>
+
+			<property name="scourses_And_Faculty">	
+				<map>
+					<entry key="CoreJava" value="Hiren"/>
+					<entry key="AdvJava" value="Shubham"/>
+					<entry key="Spring" value="Wasim"/>
+					<entry key="Hibernate" value="Sajjad"/>
+				</map>
+			</property>
+
+			<property name="scourse_And_Cost">	
+				<props>
+					<prop key="Core Java">1500</prop>
+					<prop key="Adv Java">2000</prop>
+					<prop key="Spring">3000</prop>
+					<prop key="Hibernate">3000</prop>
+				</props>
+			</property>
+
+	    </bean>
+
+	</beans>
+	
+# Test.java
+
+	package com.shaukat.test;
+
+	import org.springframework.context.ApplicationContext;
+	import org.springframework.context.support.AbstractApplicationContext;
+	import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+	import com.shaukat.beans.Student;
+	import com.shaukat.beans.Address;
+
+	public class Test {
+
+		public static void main(String[] args) {
+
+			ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+			Student std=(Student)context.getBean("std");
+			System.out.println(std);
+		}
+	}
+
+
