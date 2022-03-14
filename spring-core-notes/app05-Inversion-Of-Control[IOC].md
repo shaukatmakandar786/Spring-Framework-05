@@ -13,9 +13,9 @@ If we inject dependent values to the bean object through Contructor then this ty
 
 If we want to use constructor dependency injection in spring application,first we have to declared respective parameterized constructor in the corresponding bean class then we have to declared that constructor arguments in spring configuration file by using the following tags.
 
-<beans>
-  <bean...>
-    <construct-arg value="---"/>
-    <constructor-arg>value</constructor-arg>
-  </bean>
-</beans>  
+    <beans>
+      <bean...>
+        <construct-arg value="---"/>
+        <constructor-arg>value</constructor-arg>
+      </bean>
+    </beans>  
