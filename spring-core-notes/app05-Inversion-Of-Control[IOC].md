@@ -263,3 +263,20 @@ If we want to use constructor dependency injection in spring application,first w
 		     </property>
 		  </bean>
 		</beans>
+		
+	2. In Spring applicatio if we want to inject Set of elements in bean then we have to declared the corresponding property
+	as java.util.Set and we have to provide values in configuration fle by using <set> tag in <property> tag or in <construct-arg> tag.	
+
+
+		<beans>  
+		  <bean id="--" class="--">
+		     <property name="--">
+			<set>
+			  <value>value1</value>
+			  <value>value2</value>
+			  ---
+			  ---
+			</set>
+		     </property>
+		  </bean>
+		</beans>
