@@ -230,4 +230,6 @@ If we want to use constructor dependency injection in spring application,first w
             System.out.println(emp);
         }
     }
+## output:
 
+	Employee [eid=E-111, ename=Zahid, esal=60000.0, eaddr=Pune, acc=Account [accNo=abc123, accName=shaukat, accType=saving, balance=25000]]
