@@ -233,3 +233,7 @@ If we want to use constructor dependency injection in spring application,first w
 ## output:
 
 	Employee [eid=E-111, ename=Zahid, esal=60000.0, eaddr=Pune, acc=Account [accNo=abc123, accName=shaukat, accType=saving, balance=25000]]
+	
+# Different types of elements injecting in spring application:
+
+1. In Spring applicatio if we want to inject User defined data types then we have to use either "ref" attribute in property tag and construct-arg tag or we have to use "<ref>" nested tag under "<property>" tag and "<construct-arg>" tag
