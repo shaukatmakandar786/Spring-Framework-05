@@ -44,5 +44,42 @@ If we want to use constructor dependency injection in spring application,first w
         }
     }
 
+# Test.java
+
+    package com.shaukat.test;
+
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.context.support.AbstractApplicationContext;
+    import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+    import com.shaukat.beans.Course;
+
+    public class Test {
+
+        public static void main(String[] args) {
+
+            ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+            Course course=(Course)context.getBean("course");
+            System.out.println(course);
+        }
+
+    }
+
     
-![Constructor Dependency injecton Example](https://github.com/shaukatmakandar786/Spring-Framework-05/tree/main/spring-core-eaxmples/app05) 
+# beans.xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            https://www.springframework.org/schema/beans/spring-beans.xsd
+            https://www.springframework.org/schema/context
+            https://www.springframework.org/schema/context/spring-context.xsd
+            ">
+        <bean id="course" class="com.shaukat.beans.Course">  
+            <constructor-arg value="C-111"/>
+            <constructor-arg value="JAVA"/>
+            <constructor-arg value="5000"/>	
+        </bean>
+
+    </beans>
