@@ -92,3 +92,142 @@ If we want to use constructor dependency injection in spring application,first w
     in beans configuration file, but if we want to inject user define data type,that is object reference values then we have to use "ref" 
     attribut in <property> tag or in <construct-arg> tag.
 
+# Account.java
+
+        package com.shaukat.beans;
+
+        public class Account {
+
+            private String accNo;
+            private String accName;
+            private String accType;
+            private long balance;
+            public String getAccNo() {
+                return accNo;
+            }
+            public void setAccNo(String accNo) {
+                this.accNo = accNo;
+            }
+            public String getAccName() {
+                return accName;
+            }
+            public void setAccName(String accName) {
+                this.accName = accName;
+            }
+            public String getAccType() {
+                return accType;
+            }
+            public void setAccType(String accType) {
+                this.accType = accType;
+            }
+            public long getBalance() {
+                return balance;
+            }
+            public void setBalance(long balance) {
+                this.balance = balance;
+            }
+            @Override
+            public String toString() {
+                return "Account [accNo=" + accNo + ", accName=" + accName + ", accType=" + accType + ", balance=" + balance
+                        + "]";
+            }
+        }
+
+# Employee.java
+
+    package com.shaukat.beans;
+
+    public class Employee {
+
+	private String eid;
+	private String ename;
+	private float esal;
+	private String eaddr;
+	private Account acc;
+	public String getEid() {
+		return eid;
+	}
+	public void setEid(String eid) {
+		this.eid = eid;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public float getEsal() {
+		return esal;
+	}
+	public void setEsal(float esal) {
+		this.esal = esal;
+	}
+	public String getEaddr() {
+		return eaddr;
+	}
+	public void setEaddr(String eaddr) {
+		this.eaddr = eaddr;
+	}
+	public Account getAcc() {
+		return acc;
+	}
+	public void setAcc(Account acc) {
+		this.acc = acc;
+	}
+	@Override
+	public String toString() {
+		return "Employee [eid=" + eid + ", ename=" + ename + ", esal=" + esal + ", eaddr=" + eaddr + ", acc=" + acc
+				+ "]";
+	}
+	
+    }
+
+# beans.xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            https://www.springframework.org/schema/beans/spring-beans.xsd
+            https://www.springframework.org/schema/context
+            https://www.springframework.org/schema/context/spring-context.xsd
+            ">
+        <bean id="account" class="com.shaukat.beans.Account">  
+            <property name="accNo" value="abc123"/>
+            <property name="accName" value="shaukat"/>
+            <property name="accType" value="saving"/>
+            <property name="balance" value="25000"/>	
+        </bean>
+
+        <bean id="emp" class="com.shaukat.beans.Employee">
+            <property name="eid" value="E-111"/>
+            <property name="ename" value="Zahid"/>
+            <property name="esal" value="60000"/>
+            <property name="eaddr" value="Pune"/>
+            <property name="acc" ref="account"/>
+
+        </bean>
+
+    </beans>
+    
+# Test.java
+
+    package com.shaukat.test;
+
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.context.support.AbstractApplicationContext;
+    import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+    import com.shaukat.beans.Account;
+    import com.shaukat.beans.Employee;
+
+    public class Test {
+
+        public static void main(String[] args) {
+
+            ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+            Employee emp=(Employee)context.getBean("emp");
+            System.out.println(emp);
+        }
+    }
+
