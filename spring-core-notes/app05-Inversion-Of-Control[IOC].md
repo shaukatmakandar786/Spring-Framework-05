@@ -296,3 +296,19 @@ If we want to use constructor dependency injection in spring application,first w
 		     </property>
 		  </bean>
 		</beans>
+	
+	3. In Spring applicatio if we want to inject Properties of elements in bean then we have to declared the corresponding property
+	as java.util.Properties and we have to provide Key-Value pair in configuration file by using <props> and <prop> tag in <property> tag or in <construct-arg> tag.
+	
+		<beans>  
+		  <bean id="--" class="--">
+		     <property name="--">
+			<props>
+			  <prop key="key1">value1</prop>
+			  <prop key="key2">value2</prop>
+			  ---
+			  ---
+			</props>
+		     </property>
+		  </bean>
+		</beans>
