@@ -702,6 +702,144 @@ In Spring Application if we want resolve Circular Dependancy Injection then we h
 
 Ans:
 
-If we provide both Constructor and Setter method dependency injection to a single bean then IOC Container will perform constructor dependency injection first at the time of creation of bean object, after that IOc container will perform Setter method dependency injection, and the values which are provided by Constructor dependency injection is override by Setter method dependency injection.
+If we provide both Constructor and Setter method dependency injection to a single bean then IOC Container will perform constructor dependency injection first at the time of creation of bean object, after that IOc container will perform Setter method dependency injection, and the values which are provided by Constructor dependency injection is override by Setter method dependency package com.shaukat.beans;
+
+public class Student {
+
+	private String sid;
+	private String sname;
+	private String saddr;
+
+	public Student(String sid, String sname, String saddr) {
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.saddr = saddr;
+	}
+
+	public String getSid() {
+		return sid;
+	}
+
+	public void setSid(String sid) {
+		this.sid = sid;
+	}
+
+	public String getSname() {
+		return sname;
+	}
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+	public String getSaddr() {
+		return saddr;
+	}
+
+	public void setSaddr(String saddr) {
+		this.saddr = saddr;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [sid=" + sid + ", sname=" + sname + ", saddr=" + saddr + "]";
+	}
+
+}
+injection.
 
 
+# Student.java
+
+	package com.shaukat.beans;
+
+	public class Student {
+
+		private String sid;
+		private String sname;
+		private String saddr;
+
+		public Student(String sid, String sname, String saddr) {
+			super();
+			this.sid = sid;
+			this.sname = sname;
+			this.saddr = saddr;
+		}
+
+		public String getSid() {
+			return sid;
+		}
+
+		public void setSid(String sid) {
+			this.sid = sid;
+		}
+
+		public String getSname() {
+			return sname;
+		}
+
+		public void setSname(String sname) {
+			this.sname = sname;
+		}
+
+		public String getSaddr() {
+			return saddr;
+		}
+
+		public void setSaddr(String saddr) {
+			this.saddr = saddr;
+		}
+
+		@Override
+		public String toString() {
+			return "Student [sid=" + sid + ", sname=" + sname + ", saddr=" + saddr + "]";
+		}
+
+	}
+
+# beans.xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		https://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd
+		">
+		<bean id="student" class="com.shaukat.beans.Student">
+
+			<property name="sid" value="S-222" />
+			<property name="sname" value="BBB" />
+			<property name="saddr" value="Pune" />
+
+			<constructor-arg index="0" value="S-111" />
+			<constructor-arg index="1" value="AAA" />
+			<constructor-arg index="2" value="Pune" />
+
+		</bean>
+
+	</beans>
+
+# Test.java
+
+	package com.shaukat.test;
+
+	import org.springframework.context.ApplicationContext;
+	import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+	import com.shaukat.beans.Student;
+
+	public class Test {
+
+		public static void main(String[] args) {
+
+			ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+			Student s1 = (Student) context.getBean("student");
+			System.out.println(s1);
+		}
+	}
+
+
+	Output: Student [sid=S-222, sname=BBB, saddr=Pune]
