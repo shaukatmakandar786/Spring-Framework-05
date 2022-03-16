@@ -176,3 +176,68 @@ constructor dependency injection on the basis of the types.
     }
     
     output: Employee [eno=E-101, ename=shaukat, eaddr=Address [hno=H-111, city=Pune, state=Maharashtra]]
+    
+If we want to provide example for "constructor" autowiring then we have to use the
+following components in the above example  
+    
+# Address.java
+    
+      same as above
+    
+# Employee.java
+    
+    package com.shaukat.beans;
+
+    public class Employee {
+
+      private String eno;
+      private String ename;
+      private Address eaddr;
+
+      public Employee(String eno, String ename, Address eaddr) {
+        super();
+        this.eno = eno;
+        this.ename = ename;
+        this.eaddr = eaddr;
+      }
+
+      @Override
+      public String toString() {
+        return "Employee [eno=" + eno + ", ename=" + ename + ", eaddr=" + eaddr + "]";
+      }
+
+    }
+    
+# beans.xml
+    
+        <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+            https://www.springframework.org/schema/beans/spring-beans.xsd
+            https://www.springframework.org/schema/context
+            https://www.springframework.org/schema/context/spring-context.xsd
+            ">
+
+      <bean id="eaddr" class="com.shaukat.beans.Address">
+        <property name="hno" value="H-111" />
+        <property name="city" value="Pune" />
+        <property name="state" value="Maharashtra" />
+      </bean>
+
+      <bean id="employee" class="com.shaukat.beans.Employee" autowire="constructor">
+
+        <constructor-arg name="eno" value="E-101" />
+        <constructor-arg name="ename" value="shaukat" />
+
+
+      </bean>
+
+    </beans>
+    
+# Test.java
+    
+      same as above
+    
+    
+
