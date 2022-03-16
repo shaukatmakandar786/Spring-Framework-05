@@ -157,20 +157,20 @@ constructor dependency injection on the basis of the types.
    
 # Test.java
     
-  package com.shaukat.test;
+    package com.shaukat.test;
 
-  import org.springframework.context.ApplicationContext;
-  import org.springframework.context.support.ClassPathXmlApplicationContext;
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-  import com.shaukat.beans.Address;
-  import com.shaukat.beans.Employee;
+    import com.shaukat.beans.Address;
+    import com.shaukat.beans.Employee;
 
-  public class Test {
+    public class Test {
 
-    public static void main(String[] args) {
+      public static void main(String[] args) {
 
-      ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-      Employee employee=context.getBean("employee",Employee.class);
-      System.out.println(employee);
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        Employee employee=context.getBean("employee",Employee.class);
+        System.out.println(employee);
+      }
     }
-  }
