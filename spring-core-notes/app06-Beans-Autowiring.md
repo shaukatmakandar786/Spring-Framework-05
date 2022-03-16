@@ -23,9 +23,16 @@
     3. Auto-Discovery[Stereo Types]
     4. Java Based Autowiring
   
-# 1. XML Based Autowiring
+# 1.XML Based Autowiring
     
-    In this approach, If we want to provide autowiring in spring applications then we have to use "autowire" attribute in <bean> tag.  
+  In this approach, If we want to provide autowiring in spring applications then we have to use "autowire" attribute in <bean> tag.  
+ 
+  EX:
+  <bean id="--" class="--" autowire="value">   
+   
+  Here value may be either of the following "autowiring modes".   
     
-    
-    
+  1.no
+  2.byName
+  3.byType
+  4.constructor  
