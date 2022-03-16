@@ -239,5 +239,15 @@ following components in the above example
     
       same as above
     
-    
+Note: If we want to block any bean object in autowiring then we have to use "autowire-
+candidate" attribute with "false" value in <bean> tag in beans configuration file.
 
+    <beans>
+    <bean id="scourse" class="com.durgasoft.beans.Course"
+    autowire-candidate="false">
+    ----
+    </bean>
+    <bean id="student" class="com.durgasoft.beans.Student" autowire="byType">
+    ----
+    </bean>
+    </beans>    
