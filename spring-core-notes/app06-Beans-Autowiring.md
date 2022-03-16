@@ -137,7 +137,7 @@ constructor dependency injection on the basis of the types.
     
 # beans.xml
 
-   <beans ---->
+     <beans ---->
 
     <bean id="eaddr" class="com.shaukat.beans.Address">
       <property name="hno" value="H-111" />
