@@ -32,7 +32,8 @@
    
   Here value may be either of the following "autowiring modes".   
     
-  1.no
-  2.byName
-  3.byType
+  1.no  
+  2.byName  
+  3.byType  
   4.constructor  
+    
