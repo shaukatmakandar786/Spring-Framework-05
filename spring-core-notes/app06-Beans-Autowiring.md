@@ -174,3 +174,5 @@ constructor dependency injection on the basis of the types.
         System.out.println(employee);
       }
     }
+    
+    output: Employee [eno=E-101, ename=shaukat, eaddr=Address [hno=H-111, city=Pune, state=Maharashtra]]
