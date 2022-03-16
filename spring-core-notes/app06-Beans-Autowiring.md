@@ -251,3 +251,41 @@ candidate" attribute with "false" value in <bean> tag in beans configuration fil
     ----
     </bean>
     </beans>    
+    
+    
+# Annotations for Autowiring:
+    
+To implement Autowiring in Spring applications with out providing autowiring
+configuration in spring configuration file , we have to use the following annotations
+provided by spring framework.
+    
+1.@Required  
+2.@Autowired  
+3.@Qualifier  
+    
+## 1.@Required
+    
+This annotation will make IOC Container to inject a particular bean object in another
+bean object is mandatory. We have to use this annotation at method level, that is, just
+before setXXX() method. After providing this annotation, if we are not providing the
+respectiove bean injection then IOC Container will rise an exception .
+    
+## 2.@Autowired
+    
+This annotation is able to represent autowiring in bean classes, it will be used at
+method level, field level and local variables level in constructor dependency injection.
+Note: If we provide "required" argument with "false" value in @Autowired annotation
+then it is not required to use @Required annotationi.  
+    
+Note: This annotation is following "byType" autowiring internally in spring
+applications if byType condition will not satisfied then it will inject byName.
+if we have more than one bean and byType or byName injection will not happens then it will through an exception.  
+    
+## 3.@Qualifier
+    
+If we are using @Autowired and we have have more than one bean and byType or byName injection will failed then IOC container wii raise an exception.  
+In this context, to resolve the ambiguity of beans injection we have to use "@Qualifier" annotation, it will be used to specify a particular bean object
+among the multiple beans of the same type for injection.
+EX: @Qualifier("bean_Identity")  
+    
+    
