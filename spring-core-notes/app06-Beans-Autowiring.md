@@ -1,5 +1,4 @@
-
-# Beans Autowiring/Beans Collaboration:
+# Beans Autowiring/Beans Collaboration
 
   In general, in spring applications, if we want to inject dependent values in setter
   method dependency injection or in constructor dependency injection we have to use
@@ -24,3 +23,9 @@
     3. Auto-Discovery[Stereo Types]
     4. Java Based Autowiring
   
+# 1. XML Based Autowiring
+    
+    In this approach, If we want to provide autowiring in spring applications then we have to use "autowire" attribute in <bean> tag.  
+    
+    
+    
