@@ -100,3 +100,58 @@ constructor dependency injection on the basis of the types.
 
   }
     
+# Employee.java
+    
+  package com.shaukat.beans;
+
+  public class Employee {
+
+    private String eno;
+    private String ename;
+    private Address eaddr;
+    public String getEno() {
+      return eno;
+    }
+    public void setEno(String eno) {
+      this.eno = eno;
+    }
+    public String getEname() {
+      return ename;
+    }
+    public void setEname(String ename) {
+      this.ename = ename;
+    }
+    public Address getEaddr() {
+      return eaddr;
+    }
+    public void setEaddr(Address eaddr) {
+      this.eaddr = eaddr;
+    }
+    @Override
+    public String toString() {
+      return "Employee [eno=" + eno + ", ename=" + ename + ", eaddr=" + eaddr + "]";
+    }
+
+
+  }
+    
+# beans.xml
+
+   <beans ---->
+
+    <bean id="eaddr" class="com.shaukat.beans.Address">
+      <property name="hno" value="H-111" />
+      <property name="city" value="Pune" />
+      <property name="state" value="Maharashtra" />
+    </bean>
+
+    <bean id="employee" class="com.shaukat.beans.Employee" autowire="byName">
+
+      <property name="eno" value="E-101" />
+      <property name="ename" value="shaukat" />
+
+
+    </bean>
+
+  </beans>
+
