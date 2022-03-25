@@ -20,3 +20,14 @@ required to
 create build process themselves, Developers do not have to mention each and  
 every configuration detail. Maven provides sensible default behavior for projects.  
 
+MAVEN does the following activities of the project lifecycle automatically.  
+ Provides default Project Structer  
+ Download Required Dependencies [Jars files]  
+ Compiles Source code  
+ Packaging projects as .jar, .war, .ear,....  
+ Starts Server  
+ Deploying Projects into Servers.  
+ Perform Unit Testing  
+ Preparing Test Reports.  
+ Preparing Documentations  
+ Undeploy applications from Servers  
