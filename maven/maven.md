@@ -31,3 +31,6 @@ MAVEN does the following activities of the project lifecycle automatically.
 * Preparing Test Reports.  
 * Preparing Documentations  
 * Undeploy applications from Servers  
+* Stops Server.
+
+
