@@ -127,6 +127,25 @@ IN MAVEN applications, we will use some other repositories are also explicitly l
                <repository>
                  <id>jboss</id>
                  <name>jboss repo</name>
-                 <url>url</url>
+                 <url>http://repository.jboss.org/nexus/content/groups/public/</url>
                </repository>
             </repositories>
+            
+            
+## 3. Remote Repository:
+
+In some Situations, Maven does not find the dependencies in Local Repository and in central
+repository, in this context, MAVEN stops the build process and generates some Exceptions. To
+overcome this problems, Maven has provided a new Features like "Remote Repository".  
+
+Remote Repository is a developer's own custom repository containing required libraries or other
+project jars.  
+
+To configure Remote Repository, we have to use the following XML tags in pom.xml file.  
+
+     <repositories>
+       <repository>
+         <id>durgasoft.lib</id>
+         <url>http://library.durgasoft.com/maven2/lib</url>
+       </repository>
+     </repositories> 
