@@ -326,4 +326,23 @@ pom file inorder to avoid configurations redundency.
 
 To declare parent pom , we have to use "pom" as value to <packaging> tag in parent pom file.  
  
-                
+              <project>
+              <modelVersion>4.0.0</modelVersion>
+              <groupId>com.durgasdoft</groupId>
+              <artifactId>my-parent</artifactId>
+              <version>0.0.1-SNAPSHOT</version>
+              <packaging>pom</packaging>
+              </project>              
+
+If we want to inherit parent pom configuration details into a particular chaild pom then we have to
+configure parent pom in chaild pom.  
+ 
+           <project ..... >
+              -----
+                 <parent>
+                   <groupId>com.durgasoft</groupId>
+                   <artifactId>my-parent</artifactId>
+                   <version>0.0.1-SNAPSHOT</version>
+                 </parent>
+              -----
+           </project>
