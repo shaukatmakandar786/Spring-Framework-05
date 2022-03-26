@@ -434,3 +434,11 @@ Here "jdbc.connection.profile" property will take "jdbc:oracle:thin:@localhost:1
 C:/apps>mvn compile -Ptest  
 Here "jdbc.connection.profile" property will take "jdbc:mysql://localhost:3306/durgadb" value.  
 jdbc.connection.url = ${jdbc.connection.url}  
+If we provide the above setups like above then at compilation time, the respective jdbc URL will be
+injected to the "jdbc.connection.url" property depending on the target environment.  
+
+Use the following command on command prompt inorder to compile the project.  
+C:/apps>mvn compile  
+Here "jdbc.connection.profile" property will take "jdbc:oracle:thin:@localhost:1521:xe" value.  
+C:/apps>mvn compile -Ptest  
+Here "jdbc.connection.profile" property will take "jdbc:mysql://localhost:3306/durgadb" value.  
