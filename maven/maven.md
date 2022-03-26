@@ -95,3 +95,37 @@ To specify the above details, we need to use the following XML tags.
       -----
     </project>
     
+# 2) Repository:
+
+If we use Dependencies in MAVEN Project then MAVEN will search for the dependent JARs in
+Repositories.  
+
+MAVEN will use three types of Repositories in order to get dependencies.  
+
+## 1. Local Repository:
+
+It is a location to manage and supply all dependencies, it will be created by MAVEN when we
+execute any MAVEN command first time.  
+
+In general, MAVEN will create Local Repository at "C:/Users/User_Name/.m2/repository"
+EX: C:\Users\LENOVO\.m2\repository.  
+
+## 2. Central Repository:
+
+It is a default Repository for MAVEN, it is located at "http://repo1.maven.org/maven2".  
+
+IN MAVEN applications, we will use some other repositories are also explicitly like.  
+
+1. http://repository.jboss.org/nexus/content/groups/public  
+2. http://mvnrepository.com  
+
+In MAVEN applications, if we want to use the above explict repositories then we have to configure
+them in pom file by using the following xml tags.  
+
+   <repositories>
+      <repository>
+        <id>jboss</id>
+        <name>jboss repo</name>
+        <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+      </repository>
+   </repositories>
