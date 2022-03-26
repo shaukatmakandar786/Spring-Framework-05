@@ -116,16 +116,17 @@ It is a default Repository for MAVEN, it is located at "http://repo1.maven.org/m
 
 IN MAVEN applications, we will use some other repositories are also explicitly like.  
 
-1. http://repository.jboss.org/nexus/content/groups/public  
-2. http://mvnrepository.com  
+1. "http://repository.jboss.org/nexus/content/groups/public"
+2. "http://mvnrepository.com"  
 
-In MAVEN applications, if we want to use the above explict repositories then we have to configure
-them in pom file by using the following xml tags.  
+         In MAVEN applications, if we want to use the above explict repositories then we have to configure
+         them in pom file by using the following xml tags.  
 
-   <repositories>
-      <repository>
-        <id>jboss</id>
-        <name>jboss repo</name>
-        <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-      </repository>
-   </repositories>
+
+         <repositories>
+               <repository>
+                 <id>jboss</id>
+                 <name>jboss repo</name>
+                 <url>url</url>
+               </repository>
+            </repositories>
