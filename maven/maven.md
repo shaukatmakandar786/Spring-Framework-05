@@ -33,4 +33,12 @@ MAVEN does the following activities of the project lifecycle automatically.
 * Undeploy applications from Servers  
 * Stops Server.
 
-![pom.png](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/pom.png)
+![pom.png](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/pom.png)  
+
+1. POM Stands for Project Object Model.
+2. POM is the fundamental unit in Maven.
+3. POM is an XML file that contains information about the project and configuration details used by Maven to build the project.
+4. POM contains default values for projects ike build directory, which is target; the source directory, which is src/main/java; the test source directory, which is src/test/java; and so on.
+5. In MAVEN1 , name of pom file is "project.xml", in MAVEN2 it was renamed to pom.xml.
+6. When we execute MAVEN project then MAVEN will look for the project configurations in pom.xml file and gets the needed things and executes the project.
+
