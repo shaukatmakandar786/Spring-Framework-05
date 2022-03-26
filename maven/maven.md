@@ -319,3 +319,11 @@ specified POM‘s dependencyManagement section.
       </dependencies>
     </dependencyManagement>  
 
+# 4) Project Inheritance:
+
+In MAVEN based applications, it is possible to inherit configurations from one pom file to another
+pom file inorder to avoid configurations redundency.  
+
+To declare parent pom , we have to use "pom" as value to <packaging> tag in parent pom file.  
+ 
+                
