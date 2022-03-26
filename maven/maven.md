@@ -82,3 +82,16 @@ To specify the above details, we need to use the following XML tags.
     Where "<versin>" tag will take Project version number.  
     Where "<packaging>" tag will take different packaging formats inorder to delivery the
     project like jar, war, ear,...  
+    
+    
+    <project ..... >
+     <!-- Project Description --
+     <modelVersion>4.0.0</modelVersion>
+      <groupid>com.durgasoft.banking</groupid>
+      <artifactid>icici.accounts</artifactid>
+      <version>1.0</version>
+      <name>Account Application</name>
+      <description> Application for Accounts module in icici Bank project </description>
+      -----
+    </project>
+    
