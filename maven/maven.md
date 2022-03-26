@@ -255,3 +255,67 @@ exported at runtime.
       <version>3.0.1</version>
       <scope>provided</scope>
     </dependency>
+
+## 3. Runtime:
+
+This scope indicates that the dependency is not required for compilation, but is for execution. It is
+in the runtime and test class paths, but not the compile class path.  
+
+    EX:  
+
+    <dependency>
+       <groupId>com.thoughtworks.xstream</groupId>
+       <artifactId>xstream</artifactId>
+       <version>1.4.4</version>
+       <scope>runtime</scope>
+    </dependency>  
+    
+## 4. Test:
+
+This scope indicates that the dependency is not required for normal use of the application, and is
+only available for the test compilation and execution phases. This scope is not transitive.  
+
+    EX:  
+
+    <dependency>
+       <groupId>junit</groupId>
+       <artifactId>junit</artifactId>
+       <version>4.12</version>
+       <scope>test</scope>
+    </dependency>
+    
+## 5. System:
+
+Dependencies with system are similar to ones with scope provided. The only difference is system
+dependencies are not retrieved from remote repository. They are present under project‘s
+subdirectory and are referred from there.  
+
+    <dependency>
+       <groupId>Explicit_Dependency</groupId>
+       <artifactId>Explicit_Dependency</artifactId>
+       <scope>system</scope>
+       <version>1.0</version>
+       <systemPath>apps\app.war\WEB-INF\lib\Explicit_Dependency.jar</systemPath>
+    </dependency>
+    
+## 6. Import:
+
+It is available in Maven 2.0.9 or later.
+Import scope is only supported on a dependency of type pom in the dependencyManagement
+section. It indicates the dependency to be replaced with the effective list of dependencies in the
+specified POM‘s dependencyManagement section.  
+
+    EX:  
+
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+           <groupId>other.pom.group.id</groupId>
+           <artifactId>other-pom-artifact-id</artifactId>
+           <version>SNAPSHOT</version>
+           <scope>import</scope>
+           <type>pom</type>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>  
+
