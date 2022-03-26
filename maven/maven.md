@@ -378,4 +378,22 @@ JAR files.
 6.Ear: create ear file from the current project.  
 7.jar: creates jar file from the current project.  
 8.war: creates war file from the current project.  
-9.rar: creates rar file from the current project.   
+9.rar: creates rar file from the current project.  
+ 
+IN general, we will use MAVEN compiler plugin inorder to perform Compilation, for this we have to
+use the following xml tags in pom.xml file.  
+ 
+      <project ---- >
+         <build>
+           <plugins>
+             <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <configuration>
+                 <source>1.8</source>
+                 <target>1.8</target>
+               </configuration>
+             </plugin>
+             </plugins>
+         </build>
+      </project> 
