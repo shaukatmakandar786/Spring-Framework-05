@@ -397,3 +397,40 @@ use the following xml tags in pom.xml file.
              </plugins>
          </build>
       </project> 
+      
+# 6) Build Profiles:
+
+IN general, profiles are used to customize the build lifecycle for different environments like
+development, testing, production,.....  
+
+     <profiles>
+       <profile>
+           <id>development</id>
+           <activation>
+             <activeByDefault>true</activeByDefault>
+           </activation>
+           <properties>
+             <jdbc.connection.url>jdbc:oracle:thin:@localhost:1521:xe</jdbc.connection.url>
+           </properties>
+       </profile>
+        <profile>
+           <id>test</id>
+           <properties>
+             <jdbc.connection.url>jdbc:mysql://localhost:3306/durgadb</jdbc.connection.url>
+           </properties>
+       </profile>
+     </profiles>  
+     
+Where each and every profile has its own id, it can be used to access the respective environment
+or profile  
+
+In src/main/resources/db.properties  
+jdbc.connection.url = ${jdbc.connection.url}  
+If we provide the above setups like above then at compilation time, the respective jdbc URL will be
+injected to the "jdbc.connection.url" property depending on the target environment.  
+Use the following command on command prompt inorder to compile the project.  
+C:/apps>mvn compile  
+Here "jdbc.connection.profile" property will take "jdbc:oracle:thin:@localhost:1521:xe" value.  
+C:/apps>mvn compile -Ptest  
+Here "jdbc.connection.profile" property will take "jdbc:mysql://localhost:3306/durgadb" value.  
+jdbc.connection.url = ${jdbc.connection.url}  
