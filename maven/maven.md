@@ -42,3 +42,29 @@ MAVEN does the following activities of the project lifecycle automatically.
 5. In MAVEN1 , name of pom file is "project.xml", in MAVEN2 it was renamed to pom.xml.
 6. When we execute MAVEN project then MAVEN will look for the project configurations in pom.xml file and gets the needed things and executes the project.
 
+# In Building MAVEN Projects, pom.xml file contains the following configurations.
+
+1. Project Description
+2. Repository
+3. Dependency Management
+4. Project Inheritance
+5. Build Configuration
+6. Build Profiles
+
+# 1. Project Description:
+
+In pom file, initial we will identify "Projection Description", it contains Project name, version
+number, packaged type,.....  
+
+To specify the above details, we need to use the following XML tags.  
+
+    <project ..... >
+    <!-- Project Description -->
+    <modelVersion> --- </modelVersion>
+    <groupid> --- </groupid>
+    <artifactid> -- </artifactid>
+    <version> -- </version>
+    -----
+    -----
+    </project>
+
