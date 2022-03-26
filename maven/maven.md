@@ -334,7 +334,8 @@ To declare parent pom , we have to use "pom" as value to <packaging> tag in pare
               <packaging>pom</packaging>
               </project>              
 
-If we want to inherit parent pom configuration details into a particular chaild pom then we have to
+
+  If we want to inherit parent pom configuration details into a particular chaild pom then we have to
 configure parent pom in chaild pom.  
  
            <project ..... >
@@ -346,3 +347,35 @@ configure parent pom in chaild pom.
                  </parent>
               -----
            </project>
+ 
+ 
+# 5) Build Configuration:
+ 
+In MAVEN , Build Configuration is mainly for plugin configurations, resources
+configurations,.....which are required in MAVEN Project.  
+MAVEN is simply the collection of plugins, where plugins are used to perform the actions like
+creating jar files, creating war files, compile Source code, executing unit test code, create project
+documentation, ......  
+MAVEN is having "Plugin Execution Framework" at its heart inorder to execute all plugins.  
+ 
+In MAVEN , there are two types of Plugins.
+ 
+1. Build Plugins  
+2. Reporting Plugins   
+ 
+## 1. Build Plugins  
+
+These plugins are executed during the build and they should be configured in the <build/> element from the POM.  
+ 
+1.Clean : It is used when you want to remove files generated at build-time in a
+project's directory.  
+2.Compiler: Compiles Java source code.  
+3.Deploy: It can be used to store artifacts in remote repository while deploying the
+applications in order to share to other projects .  
+4.Install: It can be used to install artifacts into local repository.  
+5.Resources: It will include all the project resources in output directory while
+JAR files.  
+6.Ear: create ear file from the current project.  
+7.jar: creates jar file from the current project.  
+8.war: creates war file from the current project.  
+9.rar: creates rar file from the current project.   
