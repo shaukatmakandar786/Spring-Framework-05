@@ -68,3 +68,17 @@ To specify the above details, we need to use the following XML tags.
     -----
     </project>
 
+
+    Where "<project>" tag is root tag in pom.xml file  
+    Where "<modelVersion>" tag declared which version of the MAVEN we are  
+    using.<modelVersion> tag will take 4.0.0 to support for MAVEN2.x/3.x versions.  
+    Where "<groupid>" tag will take an unique ID for an organization, or a project.Normally we
+    use a group ID similar to the root Java package name of the project.  
+    Where "<artifactid>" tag will take name of the project.The artifact ID is used as name for a
+    sub directory under the group ID directory in the Maven repository and as part of the
+    name of the JAR file produced when
+    building the project.The build result, a JAR, WAR
+    or EAR file, is called an artifact in Maven.  
+    Where "<versin>" tag will take Project version number.  
+    Where "<packaging>" tag will take different packaging formats inorder to delivery the
+    project like jar, war, ear,...  
