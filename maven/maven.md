@@ -173,3 +173,28 @@ in Remote Repository, if they are identified then MAVEN will load them into Loca
 Repository for futur reference. If the dependencies are not existed at Remote Repositories
 then MAVEN will stop the execution and generate some Exceptions.  
 
+# 3) Dependency Management:
+
+In Applications, Dependencies are the libraries[Collection of JARs] which are required to compile,
+test and run our applications.  
+
+In General, in application development, we will download the required libraries from internet and
+we will store them in application directory structer.  
+
+The main Advantage of MAVEN in applications development is that not to store any Dependent
+JAR files in Project Directory Structer by downloading them explicitly, MAVEN has given flexibility
+to the developers like to specify dependent JAR files names in pom file, where MAVEN will search
+for them in the repositories and MAVEN will load them into the project directory structer
+automatically.  
+
+If we need any Library in MAVEN based applications then we have to declare them in pom file like
+below.  
+
+     < dependencies>
+       <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>3.5.6-Final</version>
+         <scope>provided</scope>
+       </dependency>
+     </dependencies>
