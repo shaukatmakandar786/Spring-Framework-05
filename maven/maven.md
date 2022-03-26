@@ -33,4 +33,4 @@ MAVEN does the following activities of the project lifecycle automatically.
 * Undeploy applications from Servers  
 * Stops Server.
 
-
+![pom.png](https://github.com/shaukatmakandar786/Spring-notes-images/blob/main/pom.png)
