@@ -220,3 +220,38 @@ There are 6 scopes available in MAVEN
 3. Runtime
 4. Test
 5. System
+6. Import
+
+## 1. Compile:
+
+It is the default scope in MAVEN . This scope will make the dependencies to avail all phases like
+compile, test, run,....  
+
+    < dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>3.5.6-Final</version>
+      <scope>compile</scope>
+    </dependency>
+
+    Note: In general, hibernate-core library is required for all phases of the application.
+    
+    
+## 2. Provided:
+
+This scope will make the dependency libraries to avail upto compilation and and upto testinbg, not
+for runtime, because, at runtime, JDKs or Containers will provide the required dependencies at
+runtime.  
+
+EX:  
+
+In web applications, Servlet API is required expliclty to compile and test the project, but, Servlet
+API is provided by the container at runtime automatically, so that, they are not required to be
+exported at runtime.  
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
