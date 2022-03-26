@@ -198,3 +198,25 @@ below.
          <scope>provided</scope>
        </dependency>
      </dependencies>
+     
+    If we provide the dependency like above then MAVEN will search for the hibernate library with the name like
+    http://repo1.maven.org/maven2/org/hibernate/hibernate-core/3.5.6-Final/  
+
+    MAVEN is following "Transitive Dependencies Mechanism", that is, if our dependencies are
+    required any other libraries then MAVEN will get them automatically without loading them explicitly
+    by the developers.    
+    
+## Dependency Scopes:
+
+In Applications, some dependencies are required to all phases of the project lifecycle like compile,
+test, run,... and some other required only some of phases of the project lifecycle.  
+
+In order to limit the dependencies for the lifecycle phases we will use Dependency Scopes.  
+
+There are 6 scopes available in MAVEN  
+
+1. Compile
+2. Provided
+3. Runtime
+4. Test
+5. System
