@@ -1,4 +1,4 @@
-# log4j:
+# Introduction:
 
 In Real time applications development, we may get no of problems or bugs or exceptions while  
 executing or testing the applications, Ti identify the problems and their locations then we have to  
@@ -86,5 +86,101 @@ these qualities of Logging Framework saves time and cost of the application.
 
 4. Poor logging strategies will increase confusion to the developers.  
 
+# Log4j:
+
+Log4J is a reliable, fast and flexible framework written in JAVA to perform logging in Java 
+applications and it is provided by Apache Software Foundations.  
+
+## Log4j Features:  
+
+1. Log4j is able to allow more than one thread at a time with out providing data inconsistency 
+,so that, Log4j is thread-safe.  
+
+2. Log4j will not slow down the application execution, it will be optimized to improve 
+application performance.  
+
+3. Log4j is providing environment to send logging messages to more than one output 
+appenders .  
+
+4. Log4j supports internationalization.  
+
+5. Log4j is providing services for both predefined and user defined facilities, it able to provide 
+some customizations also.  
+
+6. Log4j allows to set logging behaviours at runtime through the configuration file.  
+
+7. Log4j is providing very good environment to traace Exceptions from its root.
+Log4j uses multiple levels like ALL, TRACE, DEBUG, INFO, WARN, ERROR and FATAL to 
+generate messages.  
+
+8. Log4j allows to change the format of log output by extending Layout class.
+Log4j is using appenders to generate log messages.  
+
+9. Log4j Arch contains mainly the following Objects:  
+
+1. Logger  
+2. Appender  
+3. Layout  
+4. Level  
+5. LogManager  
+6. Filter  
+7. ObjectRender  
+
+### 1. Logger:
+
+This Object is responsibile to get logging messages from Java applications  
+
+### 2. Appender:
+
+The main intention of Appender object is to get logging messages from Logger object and  
+publishing that logging messages to the preffered destinations. Each and Every Appender Object  
+must have atleast one Destination object inorder to send logging messages.  
+
+EX: ConsoleAppender is able to store logging messages on Console.  
+
+### 3. Layout:  
+
+The main intention of Layout object is to format logging messages in different styles.Layout Object  
+is used by Appender object just before publishing Logging Messages.  
+
+### 4. Level:  
+
+The main intention of Level object is to define granualarity and priority of any Logging information.
+Each and every Logging information must be with a particular Logging Level.  
+
+Log4j API has provided the following Levels to the Logging messages.
+
+1. ALL  
+2. TRACE  
+3. DEBUG  
+4. ENFO  
+5. WRAN  
+6. ERROR  
+7. FATAL  
+8. OFF  
+
+Log4j is giving priorities for the logging messages in the following order.  
+ALL >TRACE > DEBUGG > INFO > WARN > ERROR > FATAL>OFF  
+
+### 5. LogManager
+
+LogManager is the central component , it able to manage Log4j framework, it will read all the initial  
+configuration details from the configuration file and stored the Logger objects in namespace  
+hierarchy with a particular reference name for futer reference. If our application access any Logger  
+object on the basis of the reference name then LogManager will return the existed Logger object  
+otherwise it will create new Logger object and return to the application.  
+
+### 6. Filter:
+
+The main intention of Filter object is used to analyze logging information and takes the decision  
+whther the messages must be logged or not.  
+
+An Appender object may have no of Filter objects, they must approve our logging message before  
+publishing logging messages in destination. 
+
+### 7. ObjectRender:  
+
+This Object will be used by Layout object in order to get string representation of the several  
+objects which are passed through Log4j framework.  
 
 
