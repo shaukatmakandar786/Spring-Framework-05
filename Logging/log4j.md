@@ -49,5 +49,42 @@ EX:
 5. ObjectGuy  
 6. TinyLog  
 
+## Advantages of Logging Frameworks:  
+
+### 1. Problem diagnosis: 
+In ingeneral, in application development, we are able to detect the   
+problems which are occurred in compilation time or in execution, but, some hidden problems are  
+existed inside the applications, which may not come in out side direcly, but, they will give effect to   
+our application execution, in this situation, if we use good Logging Framework then it is possible to   
+detect the hidden problems quickly and we can fix them easily.  
+
+### 2. Quick Debugging: 
+Once if we diagnose the problem and if we identify the location of the  
+problem by using logging framework then it is very simple to fix that problem and it simplifies  
+Debugging and it able to reduce overall Debugging time.  
+
+### 3. Easy Maintenance: 
+If we provide good Logging Framework to perform logging in our  
+applications then it will provide somde description or information about our application which is  
+usefull to manage our applications easily.  
+
+### 4. History: 
+In general, all Logging Frameworks are tracing the applications flow of execution and  
+they are able to store tracing details in a file system, this logging details are usefull to analyze the  
+problems and to solve the problems.  
+
+### 5. Cost and Time Saving: 
+Logging Frameworks will simplifies debugging, easy maintenance , persisting application information,..... ,  
+these qualities of Logging Framework saves time and cost of the application.  
+
+## Drawbacks with Logging Frameworks:
+
+1. Logging Frameworks needs to write some extra code in our java applications, it will increase overhead to the application.  
+
+2. Logging Frameworks will provide some extra code in our applications, it will increase application execution time at runtime, it will reduce application performance.  
+3. Logging Framework will provide some extra code in application, so that, it will increase application length.  
+
+4. Poor logging strategies will increase confusion to the developers.  
+
 
 
