@@ -182,5 +182,6 @@ publishing logging messages in destination.
 
 This Object will be used by Layout object in order to get string representation of the several  
 objects which are passed through Log4j framework.  
+..
 
 
